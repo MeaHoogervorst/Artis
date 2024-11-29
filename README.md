@@ -40,11 +40,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Artis homepagina  
-  <img src="![alt text](readme-images/Home.png)" width="375px" alt="omschrijving van de pagina">
+  <img src="![omschrijving van de pagina](readme-images/Home.png)" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Plan je bezoek 
-  <img src="![alt text](<readme-images/Screenshot 2024-11-28 at 20.20.45.png>)" width="375px" alt="omschrijving van de pagina">
+  <img src="![omschrijving van de pagina](readme-images/planjebezoek.png)" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
@@ -57,6 +57,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  - De site is goed te gebruiken met alleen het toetsenbord.
+  - Kleine letters zijn slecht te zien met slechtziendheid.
+  - Website is moeilijk te gebruiken met een motorische afwijking.
+  - Het is erg lastig om door het carousel heen te swipen.
 
 </details>
 
@@ -90,6 +94,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+Wat lastig ging was het bijhouden van de README. Ik had hier helemaal niet aan gedacht tijdens het maken van mijn website en deze was dus nog niet compleet. Wat goed ging was het maken van mijn navigatie, dit vond ik best lastig omdat er een div en een nav onder elkaar moesten die allebei naast elkaar moesten staan en responsive moesten zijn. Maar dit is uiteindelijk wel gelukt.
+
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -105,9 +111,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
   - punt 1
+  Houd goed de README bij om het proces vast te leggen.
   - punt 2
+  De contact pagina is iets te kort, kies nog een andere pagina met meer content.
   - nog een punt
-  - ...
+  Maak de breakdownschet digitaal.
+  
 
 </details>
 
@@ -122,6 +131,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  
+  Wat goed ging afgelopen week was het schrijven van al mijn html. Voor beide pagina's heb ik nu de html geschreven. Wel heb ik wat vragen over het maken van de dropdown menu's en het carousel. Daarnaast heb ik ook al veel css geschreven waardoor de pagina's al echt vormgeving beginnen te krijgen. Ook probeer ik deze week beter mijn README bij te houden zodat deze niet achter gaat lopen.
+
 
 
   ### Agenda voor meeting
@@ -129,9 +141,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   | student 1      | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | img bovenin section/article | en dit             | en ik dit    | en dan ik dat    |
+  | dropdown maken | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | video op formaat            | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
