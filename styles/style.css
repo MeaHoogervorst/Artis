@@ -4,7 +4,7 @@
 *,
 *::after,
 *::before {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /****************/
@@ -22,11 +22,12 @@
 
 body {
     font-family: 'Nunito', sans-serif;
-    background-color: #ffffff; 
+    background-color: #ffffff;
     color: #333;
     line-height: 1.6;
     padding: 0;
 }
+
 
 
 .container {
@@ -34,7 +35,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 10%;
-    background-color: #ffffff; 
+    background-color: #ffffff;
 }
 
 header {
@@ -71,11 +72,9 @@ nav ul {
 
 nav ul li {
     color: rgb(0, 0, 0);
-	background-color: #ddd;
-	border-radius: 1em;
-	margin-bottom: 1em;
-	display: flex;
-	justify-content: center;
+    background-color: #ecefec;
+    display: flex;
+    justify-content: center;
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -86,38 +85,139 @@ nav ul li {
 
 nav ul li:hover {
     background-color: #C5E3BE;
-    border-radius:1em;
+    border-radius: 1em;
 }
-div a p{
-	background-color: #000000;
-	color: #ffffff;
-	padding: 10px;
-	border-radius: 2em;
-	padding-left: 30px;
-	padding-right: 30px;
+
+nav ul li:nth-of-type(1) {
+    border-top-left-radius: 4em;
+    border-bottom-left-radius: 4em;
+    border-bottom-right-radius: 1em;
+    border-top-right-radius: 1ems;
+    padding-left: 30px;
+    padding-right: 30px;
+    transform: skew(-10deg);
+    overflow: hidden;
+}
+
+nav ul li:nth-of-type(2) {
+    overflow: hidden;
+    border-radius: 0.5em;
+}
+
+nav ul li:nth-of-type(3) {
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 4em;
+    border-top-right-radius: 4em;
+    transform: skew(10deg);
+    overflow: hidden;
+}
+
+
+div a p {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 2em;
+    padding-left: 30px;
+    padding-right: 30px;
 
 }
 
 main {
     padding: 40px 10%;
 }
-.sectioneen{
-	background-color: #011E07;
-	color:#C5E3BE ;
-}
-.sectioneen h2{
-	color: #C5E3BE;
-	font-size: xxx-large;
-	font-weight: 700;
-}
-.sectioneen a{
-color: #C5E3BE;
-}
-.sectioneen a p{
-    color: #C5E3BE ;
+
+.sectioneen {
+    background-color: #011E07;
+    color: #C5E3BE;
+    padding: 40px;
+    border-radius: 3em;
 }
 
-section{
+.sectioneen h2 {
+    color: #C5E3BE;
+    font-size: xxx-large;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.sectioneen ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sectioneen ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+    /* Zorgt dat de pseudo-elementen worden gepositioneerd relatief aan de LI */
+}
+
+.sectioneen ul li img {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.sectioneen ul li a {
+    color: #C5E3BE;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-bottom: 5px;
+    flex-grow: 1;
+    /* Zorg dat de link en pseudo-elementen zich over de hele breedte uitstrekken */
+}
+
+/* Lijn over de hele breedte van de section */
+.sectioneen ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* Volledige breedte van de link */
+    height: 0.1px;
+    background-color: #C5E3BE;
+}
+
+/* Pijl aan het uiteinde van de lijn */
+.sectioneen ul li a::after {
+    content: "→";
+    position: absolute;
+    right: 0;
+    /* Plaats aan het uiteinde van de lijn */
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    transition: transform 0.3s ease;
+}
+
+/* Hover-effect voor pijl */
+.sectioneen ul li a:hover::after {
+    transform: translateY(-50%) translateX(5px);
+    /* Pijl beweegt naar rechts */
+}
+
+.sectioneen h2 {
+    color: #C5E3BE;
+    font-size: xxx-large;
+    font-weight: 700;
+}
+
+.sectioneen a {
+    color: #C5E3BE;
+}
+
+.sectioneen a p {
+    color: #C5E3BE;
+}
+
+section {
     background-color: #C5E3BE;
     padding: 40px;
     border-radius: 2em;
@@ -126,13 +226,87 @@ section{
     transition: box-shadow 0.3s ease;
 }
 
-article{
+/* Carousel */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.artispark {
+    flex: 0 0 100%;
+    /* Dit zorgt ervoor dat elke slide 100% van de breedte van de container neemt */
+    transition: transform 0.5s ease-in-out;
+    /* Voor een vloeiende overgang bij veranderen van slide */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+.carousel .artispark:nth-child(1) {
+    background-color: #C5E3BE;
+}
+
+.carousel .artispark:nth-child(1) li a {
+    color: #000000;
+}
+
+.carousel .artispark:nth-child(1) h2 {
+    font-weight: 400;
+}
+
+.carousel .artispark:nth-child(2) {
+    background-color: #ffffff;
+}
+
+.carousel .artispark:nth-child(2) li a {
+    color: #000000;
+}
+
+.carousel .artispark:nth-child(2) h2 {
+    font-weight: 400;
+}
+
+.carousel .artispark:nth-child(3) {
+    background-color: #1e1e1e;
+}
+
+.carousel .artispark:nth-child(3) h2 {
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.carousel .artispark:nth-child(3) p {
+    color: #ffffff;
+}
+
+.carousel .artispark:nth-child(3) li a {
+    color: #ffffff;
+}
+
+article {
     background-color: #eaeaea;
     padding: 40px;
     border-radius: 2em;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 1em;
-    transition: box-shadow 0.3s ease;
+
 }
 
 section:hover,
@@ -144,7 +318,7 @@ section h2,
 article h2 {
     font-size: 2.5rem;
     color: #000000;
-    font-weight: 800;
+    font-weight: 400;
     margin-bottom: 15px;
 }
 
@@ -175,16 +349,18 @@ article ul li {
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
-section ul li img{
+
+section ul li img {
     width: 30px;
     margin-right: 1em;
 }
-section ul li{
+
+section ul li {
     display: flex;
 }
 
 a {
-    color: #C5E3BE; 
+    color: #C5E3BE;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -203,14 +379,14 @@ button {
     border-radius: 2em;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-	margin-bottom: 1em;
+    margin-bottom: 1em;
 }
-article button{
-    color:#eaeaea ;
+
+article button {
+    color: #eaeaea;
 }
-.artispark {
-    background-color: #C5E3BE;
-}
+
+
 
 button:hover {
     background-color: #000000;
@@ -224,7 +400,7 @@ button:focus {
 
 video {
     width: 100%;
-	max-width: 500px;
+    max-width: 500px;
     border-radius: 1em;
     margin-bottom: 1em;
 }
@@ -236,6 +412,11 @@ img {
     border-radius: 3em;
     margin-bottom: 20px;
 }
+
+.collage img {
+    width: 40%;
+}
+
 
 
 footer {
@@ -262,14 +443,14 @@ form {
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	margin-bottom: 3em;
+    margin-bottom: 3em;
 }
 
 form h2 {
     font-size: 2.5rem;
     color: #003b1c;
     margin-bottom: 20px;
-	margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 form input[type="email"] {
@@ -304,6 +485,36 @@ section ul li a {
     color: #011E07;
 }
 
+h3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+p {
+    margin-bottom: 2em;
+}
+
+.carousel {
+    margin-bottom: 5em;
+}
+.collage{
+    background-color:#C5E3BE ;
+}
+.collage button{
+    color: #C5E3BE;
+}
+p a{
+    color: #000000;
+}
+.gechiedenis{
+    background-color: #043f09;
+}
+.geschiedenis, .geschiedenis h2, .geschiedenis p, .geschiedenis p a{
+    background-color: #011E07;
+    color: #C5E3BE;
+}
+
+
 
 @media (max-width: 1024px) {
     .container {
@@ -318,9 +529,6 @@ section ul li a {
         font-size: 2.5rem;
     }
 
-    nav ul {
-        flex-direction: column;
-    }
 
     nav ul li {
         padding: 12px;
@@ -333,6 +541,7 @@ section ul li a {
     form button[type="submit"] {
         width: 100%;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -343,6 +552,5 @@ section ul li a {
     header img {
         height: 40px;
     }
+    
 }
-
-
